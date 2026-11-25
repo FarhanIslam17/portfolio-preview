@@ -11957,6 +11957,9 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
   }
   function safepin(p, active, mobile, w, h) {
     if (mobile) {
+      // p07: at the 0%/100% endpoints the PROJECTS label sits over the
+      // project blocks, which must stay fully visible and tappable there.
+      if ((active === 0 || active === 6) && p.name === "PROJECTS") return false;
       let storyTop = document.querySelector(".story")?.getBoundingClientRect().top ?? h * 0.6;
       if (w > h && h < 560) return p.x > 4 && p.x < w - 4 && p.y > 80 && p.y < h - 70;
       if (p.name.startsWith("PB")) return p.x > 4 && p.x < w + 30 && p.y > 135 && p.y < h - 150;
@@ -12131,6 +12134,11 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
             // two-row spread and the look target nudged toward the near row.
             let pBump = smoother((smooth - 0.4) / 0.08) * (1 - smoother((smooth - 0.56) / 0.08));
             cn.to = [cn.to[0] + 12 * pBump, 0, cn.to[2] + 3 * pBump];
+            // p07: approaching the 100% endpoint the two-row cluster drifts to
+            // the right edge of the narrow mobile frustum; ease the look target
+            // toward it so all seven blocks stay in frame and tappable.
+            let eBump = smoother((smooth - 0.86) / 0.1);
+            cn.to = [cn.to[0] + 16 * eBump, 0, cn.to[2] + 2 * eBump];
           }
         }
         let cam = { eye: [tween(cn.eye[0], wc.eye[0], modeBlend), tween(cn.eye[1], wc.eye[1], modeBlend), tween(cn.eye[2], wc.eye[2], modeBlend)], to: [tween(cn.to[0], wc.to[0], modeBlend), tween(cn.to[1], wc.to[1], modeBlend), tween(cn.to[2], wc.to[2], modeBlend)] };
