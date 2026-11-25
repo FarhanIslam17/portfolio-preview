@@ -11327,16 +11327,18 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { name: "CONTROLS / OTHER", items: ["PID control", "Relay logic & safety interlocks", "Hardware validation & test", "Soldering / crimping / bring-up"] }
   ];
   var projects = [
-    { key: "MICRO", short: "MICROWAVE", accent: [1, 0.68, 0.27], type: "TEAM COURSE PROJECT \xB7 1P13 \xB7 FEB\u2013APR 2025", heading: "Accessible microwave control system", body: "Team-built accessible microwave interface using ultrasonic sensing, an ESP32 and spoken feedback. Farhan contributed CAD/enclosure design and documentation.", flow: ["SENSE", "INTERPRET", "SPEAK"], url: "https://fancy-brook-b6f.notion.site/Accessible-Microwave-Control-System-1c644bb53cc980c58734ddcbbe8314d4" },
-    { key: "LIDAR", short: "LIDAR", accent: [0.3, 0.85, 0.78], type: "PERSONAL BUILD", heading: "Indoor 3D spatial mapping", body: "A rotating time-of-flight sensor and stepper motor, read by an MSP432E401Y, turn room measurements into a spatial representation processed in Python.", flow: ["SCAN", "CAPTURE", "MAP"], url: "https://fancy-brook-b6f.notion.site/MSP432-LiDAR-Room-Scanner-37344bb53cc9805f8890dedb5e257b23" },
-    { key: "SINK", short: "CURRENT SINK", accent: [0.66, 0.56, 1], type: "COURSE LAB \xB7 3EJ4 \xB7 LAB 1", heading: "Transistor characterization and current sink", body: "Bench characterization of 2N3904 and 2N3906 transistors with an Analog Discovery 2, followed by a simulated emitter feedback current sink design.", flow: ["MEASURE", "MODEL", "DESIGN"], url: "https://fancy-brook-b6f.notion.site/Transistor-Characterization-and-a-Constant-Current-Sink-40b44bb53cc981f498f1cfb82da550cc" },
-    { key: "AMP", short: "CE AMPLIFIER", accent: [1, 0.47, 0.6], type: "COURSE LAB \xB7 3EJ4 \xB7 LAB 2", heading: "Single stage amplifier characterization", body: "Common emitter amplifier compared across simulation and bench measurements, with gain and loading sensitivity examined.", flow: ["SIMULATE", "MEASURE", "COMPARE"], url: "https://fancy-brook-b6f.notion.site/Single-Stage-Amplifiers-Simulation-vs-Bench-40b44bb53cc98185b0e0f0c9b5042a39" },
-    { key: "XOR", short: "CMOS XOR", accent: [0.4, 0.68, 1], type: "COURSE PROJECT \xB7 2EI4 \xB7 PROJECT 4", heading: "CMOS XOR gate on a breadboard", body: "Two input XOR gate built from 12 MOSFETs on two MC14007B chips, with the truth table and loaded rise and fall time tested on an Analog Discovery 2.", flow: ["BUILD", "TEST", "MEASURE"], url: "https://fancy-brook-b6f.notion.site/CMOS-XOR-Gate-Built-from-Two-MC14007B-Chips-40b44bb53cc9814ebbf8ce7cfa5f9da4" }
+    { key: "MICRO", short: "MICROWAVE", accent: [0.58, 1, 0.45], type: "TEAM PROJECT \xB7 FEB\u2013APR 2025", heading: "Accessible microwave control system", body: "Team-built accessible microwave interface using ultrasonic sensing, an ESP32 and spoken feedback. Farhan contributed CAD/enclosure design and documentation.", flow: ["SENSE", "INTERPRET", "SPEAK"], url: "https://fancy-brook-b6f.notion.site/accessible-microwave-control-system" },
+    { key: "LIDAR", short: "LIDAR", accent: [0.3, 0.85, 0.78], type: "PERSONAL BUILD", heading: "Indoor 3D spatial mapping", body: "A rotating time-of-flight sensor and stepper motor, read by an MSP432E401Y, turn room measurements into a spatial representation processed in Python.", flow: ["SCAN", "CAPTURE", "MAP"], url: "https://fancy-brook-b6f.notion.site/lidar-room-scanner" },
+    { key: "SINK", short: "CURRENT SINK", accent: [0.66, 0.56, 1], type: "ANALOG ELECTRONICS \xB7 BENCH + SIMULATION", heading: "Transistor characterization and current sink", body: "Bench characterization of 2N3904 and 2N3906 transistors with an Analog Discovery 2, followed by a simulated emitter feedback current sink design.", flow: ["MEASURE", "MODEL", "DESIGN"], url: "https://fancy-brook-b6f.notion.site/transistor-characterization-current-sink" },
+    { key: "AMP", short: "CE AMPLIFIER", accent: [1, 0.47, 0.6], type: "ANALOG ELECTRONICS \xB7 SIMULATION VS BENCH", heading: "Single stage amplifier characterization", body: "Common emitter amplifier compared across simulation and bench measurements, with gain and loading sensitivity examined.", flow: ["SIMULATE", "MEASURE", "COMPARE"], url: "https://fancy-brook-b6f.notion.site/common-emitter-amplifier" },
+    { key: "XOR", short: "CMOS XOR", accent: [0.4, 0.68, 1], type: "DIGITAL ELECTRONICS \xB7 INDIVIDUAL BUILD", heading: "CMOS XOR gate on a breadboard", body: "Two input XOR gate built from 12 MOSFETs on two MC14007B chips, with the truth table and loaded rise and fall time tested on an Analog Discovery 2.", flow: ["BUILD", "TEST", "MEASURE"], url: "https://fancy-brook-b6f.notion.site/cmos-xor-gate" },
+    { key: "FPGA", short: "FPGA ADC", accent: [1, 0.16, 0.24], type: "DIGITAL DESIGN \xB7 VHDL \xB7 VERIFIED IN SIMULATION", heading: "Dual-channel ADC capture on FPGA", body: "VHDL data acquisition core for a dual-channel SPI ADC with clock-domain crossing, hardware FIR filtering and a CRC-protected UART link, verified with 55 simulation test configurations, mutation testing and open-tool synthesis.", flow: ["SAMPLE", "FILTER", "STREAM"], url: "https://fancy-brook-b6f.notion.site/adc-capture-fpga" },
+    { key: "CAN", short: "CAN BCM", accent: [1, 0.85, 0.3], type: "EMBEDDED C \xB7 CAN + UDS \xB7 VERIFIED IN SIMULATION", heading: "CAN body controller with A/B bootloader", body: "Body control module firmware in embedded C with an A/B over-the-air bootloader and UDS diagnostics on CAN, verified in Renode emulation with 20 system tests and 89 host checks.", flow: ["UPDATE", "VERIFY", "ROLLBACK"], url: "https://fancy-brook-b6f.notion.site/can-bootloader-uds" }
   ];
 
   // src/App.tsx
   var import_jsx_runtime21 = __toESM(require_jsx_runtime());
-  var resumePdfUrl = "https://farhanislam17.github.io/portfolio-preview/Farhan_Islam_Resume.pdf";
+  var resumePdfUrl = "https://farhanislam17.github.io/Farhan_Islam_Resume.pdf";
   var openResume = () => window.open(resumePdfUrl, "_blank", "noopener,noreferrer");
   var parts = [
     { name: "INTERN", x: -44, z: -24, w: 21, d: 11, h: 3.2, color: "package", detail: "Internships \xB7 General Motors (incoming) and Reaction Dynamics" },
@@ -11347,13 +11349,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { name: "CONTACT", x: -30, z: -1, w: 14, d: 9, h: 2.4, color: "package", detail: "Contact \xB7 email, LinkedIn, GitHub" }
   ];
   var SECTION_NODES = ["INTERN", "TEAMS", "PROJ", "SKILLS", "RESUME", "CONTACT"];
+  var pbHoverOn = (a) => a === 0 || a === 3 || a === 6;
   var CHIPS = { includes: (n) => typeof n === "string" && n.startsWith("PB") };
   var DISPLAY = { INTERN: "INTERNSHIPS", TEAMS: "DESIGN TEAMS", PROJ: "PROJECTS", SKILLS: "SKILLS", ABOUT: "ABOUT", RESUME: "RESUME", CONTACT: "CONTACT" };
   var ROUTE_WAYPOINTS = [
     [[-62, -22], [-61.2, -28], [-57.5, -32.6], [-52.4, -33.3], [-49.6, -31.9], [-49, -29.9]],
     [[-33.5, -24], [-27.5, -24.8], [-21.5, -22.8], [-16.5, -25.2], [-12.6, -27.2], [-9.8, -27]],
     [[9.8, -27], [15.5, -27.6], [21.5, -24.4], [27.5, -25.6], [32.6, -26]],
-    [[55, -26], [60.5, -26.4], [64.2, -22], [64.6, -12], [63.6, -1], [61, 8.5], [56.5, 14], [52, 16.4]],
+    [[55, -26], [60.5, -26.4], [68.3, -22], [68.5, -12], [66.6, -1], [61, 8.5], [56.5, 14], [52, 16.4]],
     [[37, 22], [31, 21.2], [25, 23.8], [19, 25.8], [13.5, 26.6], [0, 27.4], [-14, 26.4], [-20, 24.6], [-26, 23.3], [-31, 22.5], [-35.4, 22]],
     [[-44, 16.4], [-44.6, 11.5], [-42, 7.2], [-36.5, 4.6], [-30, 4.2]],
     [[-37, -1], [-43.5, -1.6], [-50, 0.2], [-58, -1]]
@@ -11361,8 +11364,11 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var RETURN_WAYPOINTS = [[-58, -1], [-62.6, -7.5], [-63.6, -15.5], [-62, -22]];
   var PROJECT_N = projects.length;
   var projectBlocks = projects.map((p, k2) => {
-    let n = PROJECT_N, pitch = 7.2, cx = 44.2;
-    return { x: cx + (k2 - (n - 1) / 2) * pitch, z: -14, w: 6, d: 6, h: 1.7 };
+    // p07: seven blocks in a staggered 4-over-3 arrangement; the front row of
+    // three sits in the gaps of the back row of four.
+    let pitch = 8, cx = 44.2, back = k2 < 4;
+    let x = back ? cx + (k2 - 1.5) * pitch : cx + (k2 - 5) * pitch;
+    return { x, z: back ? -17.2 : -8.8, w: 6, d: 6, h: 1.7 };
   });
   var supportEdges = [
     [[-44, -29.9], [-44.8, -32], [-43.4, -34.2]],
@@ -11370,8 +11376,11 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     [[46, 27.4], [45.2, 29.6], [46.6, 31.6]]
   ];
   projectBlocks.forEach((b, k2) => {
-    let xp = 43 + (k2 - (PROJECT_N - 1) / 2) * 5.2;
-    supportEdges.push([[xp, -21.4], [xp, -19.8], [b.x, -18.8], [b.x, b.z - b.d / 2 + 0.2]]);
+    // p07: support wires fan out from the PROJ package edge; front-row wires run
+    // straight through the gaps between the back-row blocks.
+    let xp = Math.max(33.5, Math.min(54.5, b.x));
+    if (k2 < 4) supportEdges.push([[xp, -21.4], [xp, -20.6], [b.x, -20.2], [b.x, b.z - b.d / 2 + 0.2]]);
+    else supportEdges.push([[xp, -21.4], [xp, -19.8], [b.x, -18.8], [b.x, b.z - b.d / 2 + 0.2]]);
   });
   var navRoutes = ROUTE_WAYPOINTS.map((w, ri) => ({ pts: densify(w, ri), hold: [0.35, 0.3, 0.3, 0.3, 0.3, 0.3, 0.55][ri] }));
   function sstep(a, b, x) {
@@ -11385,29 +11394,34 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     let t = (d - rd2.cum[i]) / (rd2.lens[i] || 1), a = r.pts[i], b = r.pts[i + 1];
     return [tween(a[0], b[0], t), tween(a[2], b[2], t), tween(a[1], b[1], t)];
   }
-  function inPoly(pt, poly) {
-    let c = false;
-    for (let i = 0, j2 = poly.length - 1; i < poly.length; j2 = i++) {
-      let a = poly[i], b = poly[j2];
-      if (a.y > pt[1] !== b.y > pt[1] && pt[0] < (b.x - a.x) * (pt[1] - a.y) / (b.y - a.y) + a.x) c = !c;
-    }
-    return c;
-  }
-  function pickBlock(mat, px, py, eye) {
-    let best = -1, bestD = 1e9;
-    projectBlocks.forEach((b, k2) => {
-      let x0 = b.x - b.w / 2 - 0.4, x1 = b.x + b.w / 2 + 0.4, z0 = b.z - b.d / 2 - 0.4, z1 = b.z + b.d / 2 + 0.4, y0 = 0.4, y1 = 0.42 + b.h + 0.75;
-      let faces = [[[x0, y1, z0], [x1, y1, z0], [x1, y1, z1], [x0, y1, z1]], [[x0, y0, z1], [x1, y0, z1], [x1, y1, z1], [x0, y1, z1]], [[x0, y0, z0], [x0, y0, z1], [x0, y1, z1], [x0, y1, z0]], [[x1, y0, z0], [x1, y0, z1], [x1, y1, z1], [x1, y1, z0]], [[x0, y0, z0], [x1, y0, z0], [x1, y1, z0], [x0, y1, z0]]];
-      for (let f2 of faces) {
-        let pp = f2.map((v2) => project(v2, mat, 1, 1));
-        if (pp.some((q2) => !q2.visible)) continue;
-        if (inPoly([px, py], pp)) {
-          let dd2 = Math.hypot(b.x - eye[0], 1 - eye[1], b.z - eye[2]);
-          if (dd2 < bestD) {
-            bestD = dd2;
-            best = k2;
+  function rayPick(invM, px, py) {
+    let nx = px * 2 - 1, ny = 1 - py * 2;
+    let un = (z3) => {
+      let x = invM[0] * nx + invM[4] * ny + invM[8] * z3 + invM[12], y2 = invM[1] * nx + invM[5] * ny + invM[9] * z3 + invM[13], z22 = invM[2] * nx + invM[6] * ny + invM[10] * z3 + invM[14], w = invM[3] * nx + invM[7] * ny + invM[11] * z3 + invM[15];
+      return [x / w, y2 / w, z22 / w];
+    };
+    let a = un(-1), b = un(1);
+    let d = [b[0] - a[0], b[1] - a[1], b[2] - a[2]];
+    let best = -1, bestT = 1e9;
+    projectBlocks.forEach((bl2, k2) => {
+      let B3 = [[bl2.x - bl2.w / 2 - 0.28, bl2.x + bl2.w / 2 + 0.28], [0.38, 0.5 + bl2.h], [bl2.z - bl2.d / 2 - 0.28, bl2.z + bl2.d / 2 + 0.28]];
+      let t0 = -1e9, t1 = 1e9, ok = true;
+      for (let ax = 0; ax < 3; ax++) {
+        let o = a[ax], dd2 = d[ax];
+        if (Math.abs(dd2) < 1e-9) {
+          if (o < B3[ax][0] || o > B3[ax][1]) {
+            ok = false;
+            break;
           }
+          continue;
         }
+        let ta = (B3[ax][0] - o) / dd2, tb = (B3[ax][1] - o) / dd2;
+        t0 = Math.max(t0, Math.min(ta, tb));
+        t1 = Math.min(t1, Math.max(ta, tb));
+      }
+      if (ok && t1 >= Math.max(t0, 0) && t0 > 0 && t0 < bestT) {
+        bestT = t0;
+        best = k2;
       }
     });
     return best;
@@ -11634,8 +11648,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   function createGeometry(mobile) {
     let d = [], dw = [], hl2 = [];
     let add = (v2) => d.push(...v2);
-    add(cube(0, -1.3, 0, 134, 2.2, 84, PALETTE.edge, 0));
-    add(cube(0, -0.13, 0, 132, 0.22, 82, PALETTE.board, 5e-3));
+    add(cube(0, -1.3, 0, 142, 2.2, 84, PALETTE.edge, 0));
+    add(cube(0, -0.13, 0, 140, 0.22, 82, PALETTE.board, 5e-3));
     for (let x of [-61, 61]) for (let z3 of [-35, 35]) {
       add(cylinder(x, 0.22, z3, 2.2, 0.5, PALETTE.metal, 14));
       add(cylinder(x, 0.53, z3, 1.25, 0.16, [0.012, 0.025, 0.025], 14));
@@ -11804,7 +11818,7 @@ precision mediump float;
 #endif
 `;
   var fragUniforms = `uniform float uHotK;uniform float uDir;uniform float uEnv;uniform float uWireBase;uniform float uPulseOn;uniform vec2 uPulseWorld;uniform vec3 uPhoton;uniform float uAll;uniform float uRouteIdx;uniform float uRouteOn;uniform float uNavHead;uniform float uIdleOn;uniform float uIdleHead;uniform float uSpineLen;`;
-  var fragment = fragHead + `varying vec3 col;varying float emit;varying vec3 place;varying vec3 normal;varying vec4 gA;varying float lf;uniform float phase;uniform float uNode;uniform float uNodeOn;uniform float uPerim;uniform float uHov[8];uniform float uPh[8];uniform vec3 uAcc[8];` + fragUniforms + `void main(){vec3 cm=col;float pd=distance(place.xz,uPulseWorld);float boardM=(emit>.002&&emit<.01)?1.:0.;if(boardM>.5){float sn=fract(sin(dot(floor(place.xz*.22),vec2(12.9898,78.233)))*43758.5453);float sn2=fract(sin(dot(floor(place.xz*.055),vec2(39.346,11.135)))*24634.6345);float sn3=fract(sin(dot(floor(place.xz*1.1),vec2(26.651,84.131)))*31459.2653);float mot=.45*sn+.35*sn2+.20*sn3;float ed=mix(.46,1.,uEnv);cm*=1.+(mot-.5)*.34;cm+=(mot-.5)*.05/ed*vec3(.7,1.,.85);cm+=vec3(.9,.52,.18)*uPulseOn*.38*exp(-pd*pd/72.);}float baseTrace=emit>0.&&emit<1.?emit*.13:0.;float nodeGlow=0.;if(uNode>0.&&abs(emit-uNode)<.4)nodeGlow=uNodeOn*(.34+.62*pow(max(0.,sin(phase*2.2)),3.));vec3 amber=vec3(1.,.62,.26);vec3 hot=vec3(1.,.9,.72);vec3 em=vec3(0.);float wire=(gA.y>-.5||gA.y<-1.5)?1.:0.;if(wire>.5&&gA.z<-.5){float nm=(uRouteIdx>-.5&&abs(gA.y-uRouteIdx)<.5)?1.:0.;float dd=gA.w-uNavHead;float bh=exp(-dd*dd/1.7);float tl=(dd*uDir<0.)?exp(dd*uDir/13.):0.;float nav=nm*uRouteOn*(bh*2.4*uHotK+tl*.9+.1);float ds=gA.x-uIdleHead;ds=mod(ds+.5*uSpineLen,uSpineLen)-.5*uSpineLen;float inS=gA.x>-.5?1.:0.;float ih=inS*exp(-ds*ds/1.7);float it=(inS>.5&&ds<0.)?exp(ds/12.):0.;float idle=uIdleOn*(ih*2.4*uHotK+it*.8);vec3 dp=place-uPhoton;float nr=exp(-dot(dp,dp)/60.)*uPulseOn*.4*uHotK;float decK=gA.x<-1.5?.45:1.;em=amber*((uWireBase*.07+uAll*.55)*decK+nav*.75+idle*.75+nr)+hot*((bh*nm*uRouteOn*1.1+ih*uIdleOn*1.1)*uHotK+uAll*.04*decK);}if(gA.z>-.5){float k=floor(gA.z);float sub=gA.z-k;float hv=0.;float ph=0.;vec3 ac=vec3(1.);for(int i=0;i<8;i++){if(float(i)==k){hv=uHov[i];ph=uPh[i];ac=uAcc[i];}}vec3 tgt=ac*.46+vec3(.075,.085,.085);if(sub<.4){cm=mix(cm,tgt*lf,hv);em+=tgt*.2*hv;}else if(sub<.6){cm+=tgt*.3*hv;}else{float dq=gA.w-ph;dq=dq-floor(dq+.5);float dl=dq*uPerim;float head=exp(-dl*dl/1.5);float tr=dl<0.?exp(dl/5.):0.;cm=ac*.5*lf;em+=ac*(.2+.5*hv)+mix(ac,vec3(1.),.55)*hv*head*2.6+ac*hv*tr*.9;}}float envDim=mix(.46,1.,uEnv);vec3 spec=vec3(.18,.22,.18)*pow(max(0.,dot(reflect(normalize(vec3(.55,-.86,-.38)),normalize(normal)),normalize(vec3(.2,.6,.8)))),18.);gl_FragColor=vec4(cm*envDim+spec*.12*(.45+.55*uEnv)+amber*baseTrace+em+vec3(.34,.88,.62)*nodeGlow,1.);}`;
+  var fragment = fragHead + `varying vec3 col;varying float emit;varying vec3 place;varying vec3 normal;varying vec4 gA;varying float lf;uniform float phase;uniform float uNode;uniform float uNodeOn;uniform float uPerim;uniform float uHov[8];uniform float uPh[8];uniform vec3 uAcc[8];` + fragUniforms + `void main(){vec3 cm=col;float pd=distance(place.xz,uPulseWorld);float boardM=(emit>.002&&emit<.01)?1.:0.;if(boardM>.5){float sn=fract(sin(dot(floor(place.xz*.22),vec2(12.9898,78.233)))*43758.5453);float sn2=fract(sin(dot(floor(place.xz*.055),vec2(39.346,11.135)))*24634.6345);float sn3=fract(sin(dot(floor(place.xz*1.1),vec2(26.651,84.131)))*31459.2653);float mot=.45*sn+.35*sn2+.20*sn3;float ed=mix(.46,1.,uEnv);cm*=1.+(mot-.5)*.34;cm+=(mot-.5)*.05/ed*vec3(.7,1.,.85);cm+=vec3(.9,.52,.18)*uPulseOn*.38*exp(-pd*pd/72.);}float baseTrace=emit>0.&&emit<1.?emit*.13:0.;float nodeGlow=0.;if(uNode>0.&&abs(emit-uNode)<.4)nodeGlow=uNodeOn*(.34+.62*pow(max(0.,sin(phase*2.2)),3.));vec3 amber=vec3(1.,.62,.26);vec3 hot=vec3(1.,.9,.72);vec3 em=vec3(0.);float wire=(gA.y>-.5||gA.y<-1.5)?1.:0.;if(wire>.5&&gA.z<-.5){float nm=(uRouteIdx>-.5&&abs(gA.y-uRouteIdx)<.5)?1.:0.;float dd=gA.w-uNavHead;float bh=exp(-dd*dd/1.7);float tl=(dd*uDir<0.)?exp(dd*uDir/13.):0.;float nav=nm*uRouteOn*(bh*2.4*uHotK+tl*.9+.1);float ds=gA.x-uIdleHead;ds=mod(ds+.5*uSpineLen,uSpineLen)-.5*uSpineLen;float inS=gA.x>-.5?1.:0.;float ih=inS*exp(-ds*ds/1.7);float it=(inS>.5&&ds<0.)?exp(ds/12.):0.;float idle=uIdleOn*(ih*2.4*uHotK+it*.8);vec3 dp=place-uPhoton;float nr=exp(-dot(dp,dp)/60.)*uPulseOn*.4*uHotK;float decK=gA.x<-1.5?.45:1.;em=amber*((uWireBase*.07+uAll*.55)*decK+nav*.75+idle*.75+nr)+hot*((bh*nm*uRouteOn*1.1+ih*uIdleOn*1.1)*uHotK+uAll*.04*decK);}if(gA.z>-.5){float k=floor(gA.z);float sub=gA.z-k;float hv=0.;float ph=0.;vec3 ac=vec3(1.);for(int i=0;i<8;i++){if(float(i)==k){hv=uHov[i];ph=uPh[i];ac=uAcc[i];}}vec3 tgt=ac*.46+vec3(.075,.085,.085);float pa=max(hv,uAll);if(sub<.4){cm=mix(cm,tgt*lf,hv);em+=tgt*(.2*hv+.16*uAll);}else if(sub<.6){cm=mix(cm,ac*lf,hv);em+=ac*(.22*hv+.12*uAll);}else{float dq=gA.w-ph;dq=dq-floor(dq+.5);float dl=dq*uPerim;float head=exp(-dl*dl/1.5);float tr=dl<0.?exp(dl/5.):0.;cm=ac*.5*lf;em+=ac*(.2+.5*hv+.24*uAll)+mix(ac,vec3(1.),.55)*pa*head*2.6+ac*pa*tr*.9;}}float envDim=mix(.46,1.,uEnv);vec3 spec=vec3(.18,.22,.18)*pow(max(0.,dot(reflect(normalize(vec3(.55,-.86,-.38)),normalize(normal)),normalize(vec3(.2,.6,.8)))),18.);gl_FragColor=vec4(cm*envDim+spec*.12*(.45+.55*uEnv)+amber*baseTrace+em+vec3(.34,.88,.62)*nodeGlow,1.);}`;
   var haloVS = `attribute vec3 p;attribute vec4 h;uniform mat4 m;varying vec3 pl;varying vec4 hh;void main(){pl=p;hh=h;gl_Position=m*vec4(p,1.);}`;
   var haloFS = fragHead + `varying vec3 pl;varying vec4 hh;` + fragUniforms + `void main(){float fall=exp(-hh.w*hh.w*3.2)*(1.-smoothstep(.75,1.,abs(hh.w)));vec3 amber=vec3(1.,.62,.26);float nm=(uRouteIdx>-.5&&abs(hh.y-uRouteIdx)<.5)?1.:0.;float dd=hh.z-uNavHead;float head=exp(-dd*dd/34.);float tl=(dd*uDir<0.)?exp(dd*uDir/16.):0.;float ds=hh.x-uIdleHead;ds=mod(ds+.5*uSpineLen,uSpineLen)-.5*uSpineLen;float inS=hh.x>-.5?1.:0.;float ih=inS*exp(-ds*ds/34.);float it=(inS>.5&&ds<0.)?exp(ds/14.):0.;vec3 dp=pl-uPhoton;float nr=exp(-dot(dp,dp)/120.)*uPulseOn;float dK=hh.x<-1.5?.4:1.;float I=uAll*.55*dK+(nm*uRouteOn*(head*.8+tl*.4+.05)+uIdleOn*(ih*.8+it*.35)+nr*.45)*uHotK;gl_FragColor=vec4(amber*fall*I*(1.-.4*uEnv),1.);}`;
   var spriteVS = `attribute vec3 p;attribute vec2 q;attribute vec3 sc;uniform mat4 m;varying vec2 uv;varying vec3 scol;void main(){uv=q;scol=sc;gl_Position=m*vec4(p,1.);}`;
@@ -11839,7 +11853,9 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
     { t: 0.64, eye: [22, 36, 54], to: [46, 0, 22] },
     { t: 0.8, eye: [-16, 38, 56], to: [-44, 0, 22] },
     { t: 0.94, eye: [-4, 36, 38], to: [-30, 0, -1] },
-    { t: 1, eye: [86, 90, 102], to: [0, 0, 0] }
+    /* i52: settled end view now matches the opening framing scale (was ~8% closer,
+       cropping the SKILLS block's bottom edge on desktop); same look direction, hero unchanged. */
+    { t: 1, eye: [93, 98, 111], to: [0, 0, 8] }
   ];
   function cameraAt(p) {
     let i = keys.findIndex((k2) => k2.t >= p);
@@ -11856,7 +11872,7 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
     { t: 0.64, node: "SKILLS", eye: [46, 27, 46], to: [46, 0, 22] },
     { t: 0.8, node: "RESUME", eye: [-44, 27, 46], to: [-44, 0, 22] },
     { t: 0.94, node: "CONTACT", eye: [-30, 24, 22], to: [-30, 0, -1] },
-    { t: 1, node: "OV", eye: [86, 90, 102], to: [0, 0, 0] }
+    { t: 1, node: "OV", eye: [93, 98, 111], to: [0, 0, 8] }
   ];
   var routeData = navRoutes.map((r) => {
     let lens = r.pts.slice(1).map((p, i) => Math.hypot(p[0] - r.pts[i][0], p[1] - r.pts[i][1]));
@@ -11950,10 +11966,10 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
     if (p.x < (p.name.startsWith("PB") ? 330 : 580) && p.y > h * 0.57) return false;
     return true;
   }
-  function Board({ progress, active, mobile, lowMotion, wire, hoverExt, onHover, onTap, onJump }) {
+  function Board({ progress, active, mobile, lowMotion, wire, hoverExt, onHover, onTap, onJump, onPick }) {
     const ref = (0, import_react23.useRef)(null), state = (0, import_react23.useRef)({ progress, active, mobile, lowMotion, wire, hoverExt, onHover, onTap }), ptr = (0, import_react23.useRef)({ x: -1, y: -1, type: "mouse", tap: false, hit: -1, pinH: -1 });
-    state.current = { progress, active, mobile, lowMotion, wire, hoverExt, onHover, onTap, onJump };
-    const [labels, setLabels] = (0, import_react23.useState)([]), [fallback, setFallback] = (0, import_react23.useState)(false);
+    state.current = { progress, active, mobile, lowMotion, wire, hoverExt, onHover, onTap, onJump, onPick };
+    const [labels, setLabels] = (0, import_react23.useState)([]), [fallback, setFallback] = (0, import_react23.useState)(false), [hovPB, setHovPB] = (0, import_react23.useState)(-1);
     (0, import_react23.useEffect)(() => {
       let canvas = ref.current;
       if (!canvas) return;
@@ -12043,7 +12059,7 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
       locMain.uPh = locMain["uPh[0]"];
       locMain.uAcc = locMain["uAcc[0]"];
       let locHalo = mkLocs(haloProg, []);
-      let hovAmt = new Array(8).fill(0), hovPh = new Array(8).fill(0), hovOn = new Array(8).fill(0), hovStart = new Array(8).fill(0), lastHit = -1;
+      let hovAmt = new Array(8).fill(0), hovPh = Array.from({ length: 8 }, (_3, k2) => k2 * 0.2), hovOn = new Array(8).fill(0), lastHit = -1;
       let accArr = new Float32Array(24);
       projects.forEach((pr2, k2) => accArr.set(pr2.accent, k2 * 3));
       let uOpen0 = gl2.getUniformLocation(program, "opening"), uEV0 = gl2.getUniformLocation(program, "uEnv");
@@ -12108,7 +12124,11 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
             cn.to = [tween(tween(cn.to[0], 2, narrow), cn.to[0], kk), 0, tween(tween(cn.to[2], 0, narrow), cn.to[2], kk)];
           } else {
             cn.eye = [cn.eye[0] * zf, cn.eye[1] * zf, cn.eye[2] * zf];
-            cn.to = [cn.to[0], 0, cn.to[2]];
+            // p06: with six project blocks the row extends past the narrow mobile
+            // frustum at the Projects stage; ease the look target right while the
+            // Projects keys are active so the sixth block stays in frame.
+            let pBump = smoother((smooth - 0.4) / 0.08) * (1 - smoother((smooth - 0.56) / 0.08));
+            cn.to = [cn.to[0] + 9 * pBump, 0, cn.to[2]];
           }
         }
         let cam = { eye: [tween(cn.eye[0], wc.eye[0], modeBlend), tween(cn.eye[1], wc.eye[1], modeBlend), tween(cn.eye[2], wc.eye[2], modeBlend)], to: [tween(cn.to[0], wc.to[0], modeBlend), tween(cn.to[1], wc.to[1], modeBlend), tween(cn.to[2], wc.to[2], modeBlend)] };
@@ -12192,9 +12212,9 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
           gl2.uniform3f(L.uPhoton, ph3[0], ph3[1], ph3[2]);
           gl2.uniformMatrix4fv(L.m, false, new Float32Array(mat));
         };
-        ptr.current.ctx = { mat, eye: cam.eye.slice() };
+        ptr.current.ctx = { mat, invM, eye: cam.eye.slice() };
         let hitNow = -1;
-        if (s.active === 3 && ptr.current.x >= 0) hitNow = pickBlock(mat, ptr.current.x, ptr.current.y, cam.eye);
+        if (pbHoverOn(s.active) && ptr.current.x >= 0) hitNow = rayPick(invM, ptr.current.x, ptr.current.y);
         if (hitNow !== lastHit) {
           lastHit = hitNow;
           if (ptr.current.type === "mouse" && !(ptr.current.pinH >= 0)) s.onHover && s.onHover(hitNow);
@@ -12206,11 +12226,10 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
         }
         let eff = ptr.current.pinH >= 0 ? ptr.current.pinH : hitNow >= 0 && ptr.current.type === "mouse" ? hitNow : s.hoverExt;
         for (let k2 = 0; k2 < 8; k2++) {
-          let tgt = s.active === 3 && k2 === eff ? 1 : 0;
-          if (tgt && !hovOn[k2]) hovStart[k2] = ms2;
+          let tgt = pbHoverOn(s.active) && k2 === eff ? 1 : 0;
           hovOn[k2] = tgt;
           hovAmt[k2] += (tgt - hovAmt[k2]) * Math.min(1, dt3 / (tgt ? 130 : 240));
-          hovPh[k2] = s.lowMotion ? 0.12 : (ms2 - hovStart[k2]) / 1700 % 1;
+          hovPh[k2] = s.lowMotion ? 0.12 : (hovPh[k2] + dt3 / 1700 * (1 + hovAmt[k2])) % 1;
         }
         gl2.uniform1f(locMain.uNode, wc.nodeEmit);
         gl2.uniform1f(locMain.uNodeOn, wc.nodeOn);
@@ -12245,8 +12264,9 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
           addSpr(pp, Math.max(1, pd2 * 0.013) * pk, [0.9 * photonOn * pa2, 0.6 * photonOn * pa2, 0.28 * photonOn * pa2]);
         }
         for (let k2 = 0; k2 < PROJECT_N; k2++) {
-          if (hovAmt[k2] > 0.03) {
-            let pp = rectPoint(projectBlocks[k2], hovPh[k2]), ac = projects[k2].accent, a = hovAmt[k2];
+          let a2 = s.lowMotion ? hovAmt[k2] : Math.max(hovAmt[k2], allOn);
+          if (a2 > 0.03) {
+            let pp = rectPoint(projectBlocks[k2], hovPh[k2]), ac = projects[k2].accent, a = a2;
             addSpr(pp, Math.max(1.4, dist3(pp) * 0.022), [ac[0] * a * 1.2, ac[1] * a * 1.2, ac[2] * a * 1.2]);
           }
         }
@@ -12270,7 +12290,7 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
           lastLabel = ms2;
           let lw = canvas.clientWidth, lh = canvas.clientHeight;
           let points = parts.map((p) => ({ name: p.name, detail: p.detail, ...project([p.x, p.h + 3, p.z], mat, lw, lh) }));
-          if (s.active === 3) projectBlocks.forEach((b, k2) => {
+          if (pbHoverOn(s.active)) projectBlocks.forEach((b, k2) => {
             let c = project([b.x, 0.42, b.z], mat, lw, lh), mxy = -1e9, xlo = 1e9, xhi = -1e9;
             for (let xx of [b.x - b.w / 2, b.x + b.w / 2]) for (let zz of [b.z - b.d / 2, b.z + b.d / 2]) {
               let q2 = project([xx, 0.42, zz], mat, lw, lh);
@@ -12278,7 +12298,7 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
               if (q2.x < xlo) xlo = q2.x;
               if (q2.x > xhi) xhi = q2.x;
             }
-            points.push({ name: "PB" + k2, label: projects[k2].short, detail: projects[k2].heading, x: (xlo + xhi) / 2, y: mxy + 14 + (!s.mobile && k2 % 2 ? 26 : 0), visible: c.visible, bx: c.x, by: mxy });
+            points.push({ name: "PB" + k2, label: projects[k2].short, detail: projects[k2].heading, x: (xlo + xhi) / 2, y: mxy + 14 + (!s.mobile && k2 % 2 ? 26 : 0), visible: c.visible || s.mobile, bx: c.visible ? c.x : null, by: c.visible ? mxy : null, ry: mxy + 14 + (!s.mobile && k2 % 2 ? 26 : 0) });
           });
           {
             let mob = s.mobile, PHW = mob ? 46 : 62, PHH = mob ? 21 : 12;
@@ -12300,12 +12320,12 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
                 let nx = band.right + PHW + 10, ny = band.top - (mob ? PHH + 20 : 22);
                 if (okPin(nx, pq.y) && nx + PHW <= lw - 8 && !hitsBand(nx, pq.y)) pq.x = nx;
                 else if (okPin(pq.x, ny) && !hitsBand(pq.x, ny)) pq.y = ny;
-                else if (mob && pq.name !== activeNode && !(s.active === 0 && SECTION_NODES.includes(pq.name))) pq.visible = false;
+                else if (mob && pq.name !== activeNode && !((s.active === 0 || s.active === 6) && SECTION_NODES.includes(pq.name))) pq.visible = false;
               }
             }
             if (mob) for (let pq of points) {
               if (pq.name.startsWith("PB") || !pq.visible) continue;
-              let must = pq.name === activeNode || s.active === 0 && SECTION_NODES.includes(pq.name);
+              let must = pq.name === activeNode || (s.active === 0 || s.active === 6) && SECTION_NODES.includes(pq.name);
               if (!must) continue;
               if (landShort) {
                 pq.x = Math.max(10 + PHW, Math.min(pq.x, lw - 10 - PHW));
@@ -12336,11 +12356,11 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
                   } else pq.y = Math.min(pq.y, Math.min(lh * 0.56, stTop - (PHH + 18)) - 2);
                 }
               }
-              let pbs = points.filter((p) => p.visible && p.name.startsWith("PB")).sort((a, b) => a.x - b.x);
-              let GAP = 30, X0 = 6, X1 = lw - 30;
+              let pbs = points.filter((p) => p.visible && p.name.startsWith("PB")).sort((a, b) => a.y - b.y);
+              let X0 = 6, X1 = lw - 30;
               for (let q2 of pbs) q2.x = Math.max(X0, Math.min(q2.x, X1));
-              for (let i = 1; i < pbs.length; i++) if (Math.abs(pbs[i].y - pbs[i - 1].y) < 44 && pbs[i].x - pbs[i - 1].x < GAP) pbs[i].x = Math.min(X1, pbs[i - 1].x + GAP);
-              for (let i = pbs.length - 2; i >= 0; i--) if (Math.abs(pbs[i + 1].y - pbs[i].y) < 44 && pbs[i + 1].x - pbs[i].x < GAP) pbs[i].x = Math.max(X0, pbs[i + 1].x - GAP);
+              let MINY = s.mobile ? 48 : 36;
+              for (let i = 1; i < pbs.length; i++) pbs[i].y = Math.max(pbs[i].y, pbs[i - 1].y + MINY);
             }
             let vis = points.filter((p) => p.visible && !p.name.startsWith("PB"));
             let hwf = (q2) => mob ? q2.name.startsWith("PB") ? 18 : 14 + (DISPLAY[q2.name] || q2.name).length * 4.6 : PHW;
@@ -12458,9 +12478,96 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
     const pbL = (p) => Math.max(innerWidth > 1050 ? 545 : 4, Math.min(p.x, innerWidth > 1050 ? innerWidth - 130 : innerWidth - 30));
     const pickAt = (e2) => {
       let r = ref.current?.getBoundingClientRect(), c = ptr.current.ctx;
-      if (!r || !c || state.current.active !== 3) return -1;
-      return pickBlock(c.mat, (e2.clientX - r.left) / r.width, (e2.clientY - r.top) / r.height, c.eye);
+      if (!r || !c) return -1;
+      let nx = (e2.clientX - r.left) / r.width, ny = (e2.clientY - r.top) / r.height;
+      return c.invM ? rayPick(c.invM, nx, ny) : -1;
     };
+    const pbSpace = (() => {
+      let m = {};
+      let pb = labels.filter((p) => p.visible && p.name.startsWith("PB")).slice().sort((a, b) => a.y - b.y);
+      if (mobile) {
+        if (pb.length) {
+          pb.sort((a, b) => +a.name.slice(2) - +b.name.slice(2));
+          let ls = innerWidth > innerHeight && innerHeight < 560;
+          let st3 = document.querySelector(".story")?.getBoundingClientRect();
+          let wr2 = ref.current?.getBoundingClientRect();
+          let wl2 = wr2 ? wr2.left : 0, wt2 = wr2 ? wr2.top : 0;
+          let vc = pb.filter((q2) => q2.bx != null);
+          if (ls) {
+            let stRc = st3 ? st3.right - wl2 : 0;
+            let maxBy = vc.length ? Math.max.apply(null, vc.map((q2) => q2.by || q2.y)) : innerHeight * 0.45;
+            let avgBy = vc.length ? vc.reduce((a, q2) => a + (q2.by || q2.y), 0) / vc.length : innerHeight * 0.4;
+            let secs2 = labels.filter((p) => p.visible && !p.name.startsWith("PB"));
+            let hw2 = (q2) => 14 + (DISPLAY[q2.name] || q2.name).length * 4.6;
+            let x0 = Math.max(innerWidth * 0.52, stRc + 16) + 23;
+            let x1 = innerWidth - 104;
+            let step = pb.length > 1 ? Math.min(52, (x1 - x0) / (pb.length - 1)) : 0;
+            let clash = (ry) => secs2.some((sq) => {
+              for (let i = 0; i < pb.length; i++) {
+                let cx = x0 + i * step;
+                if (Math.abs(cx - sq.x) < hw2(sq) + 24 && Math.abs(ry - sq.y) < 32) return true;
+              }
+              return false;
+            });
+            let bh2 = ref.current?.clientHeight || innerHeight;
+            let yLo = Math.max(96, -wt2 + 8), yHi = Math.min(bh2 - 96, -wt2 + innerHeight - 28);
+            if (yHi < yLo) {
+              yLo = 96;
+              yHi = Math.max(97, bh2 - 96);
+            }
+            let cands = [maxBy + 31, avgBy, avgBy - 58, innerHeight - 64, 110].map((v2) => Math.max(yLo, Math.min(yHi, Math.round(v2))));
+            let rowY = cands.find((v2) => !clash(v2));
+            if (rowY == null) rowY = cands[0];
+            pb.forEach((q2, i) => {
+              m[q2.name] = { x: x0 + i * step, y: rowY };
+            });
+          } else {
+            let maxBy = -1e9;
+            for (const q2 of pb) maxBy = Math.max(maxBy, q2.by ?? q2.y);
+            let bh3 = ref.current?.clientHeight || innerHeight;
+            let rowY = Math.max(116, Math.min((st3 ? st3.top - wt2 : innerHeight) - 28, maxBy + 26, bh3 - 156));
+            let pc = -1e9;
+            let xs2 = [];
+            for (const q2 of pb) {
+              let cx = Math.max(q2.bx ?? 24, pc + 48);
+              xs2.push(cx);
+              pc = cx;
+            }
+            let shift = pc > innerWidth - 24 ? innerWidth - 24 - pc : 0;
+            pb.forEach((q2, i) => {
+              m[q2.name] = { x: Math.max(24, xs2[i] + shift), y: rowY };
+            });
+          }
+          pb.forEach((q2) => {
+            let s = m[q2.name];
+            if (s) {
+              if (s.x != null) q2.x = s.x;
+              q2.y = s.y;
+            }
+          });
+        }
+        return m;
+      }
+      let secs = labels.filter((p) => p.visible && !p.name.startsWith("PB"));
+      let gap = 30, hh = 11.5, ph = 23;
+      let prev = -1e9;
+      for (const q2 of pb) {
+        let ny = prev === -1e9 ? q2.y : Math.max(q2.y, prev + gap);
+        for (const sq of secs) {
+          if (Math.abs(sq.x - q2.x) < 150 && ny < sq.y + hh + 8 && ny + ph > sq.y - hh - 8) ny = sq.y + hh + 8;
+        }
+        m[q2.name] = { x: null, y: ny };
+        prev = ny;
+      }
+      if (pb.length) {
+        let over = prev + ph - ((ref.current?.clientHeight || 633) - 10);
+        if (over > 0) {
+          let up = Math.min(over, 80);
+          for (const q2 of pb) m[q2.name].y -= up;
+        }
+      }
+      return m;
+    })();
     return /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "board-wrap", onPointerMove: (e2) => {
       let r = ref.current?.getBoundingClientRect();
       if (!r) return;
@@ -12472,6 +12579,7 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
         if (h !== ptr.current.mh) {
           ptr.current.mh = h;
           ptr.current.hit = h;
+          setHovPB(h);
           state.current.onHover && state.current.onHover(h);
         }
       }
@@ -12483,18 +12591,24 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
       ptr.current.type = e2.pointerType || "mouse";
       if (ptr.current.type !== "mouse") {
         ptr.current.tap = false;
-        if (state.current.active === 3) {
-          let h = pickAt(e2);
-          state.current.onTap && state.current.onTap(h);
-        }
+        let h = pickAt(e2);
+        if (state.current.onPick) state.current.onPick(h);
       }
     }, onPointerLeave: () => {
       ptr.current.x = -1;
       ptr.current.y = -1;
+      setHovPB(-1);
     }, onClick: (e2) => {
       if (e2.target.closest && e2.target.closest(".pin")) return;
       let k2 = ptr.current.type === "mouse" ? pickAt(e2) : -1;
-      if (k2 >= 0 && projects[k2].url) window.open(projects[k2].url, "_blank", "noopener,noreferrer");
+      if (k2 >= 0) {
+        ptr.current.x = -1;
+        ptr.current.y = -1;
+        ptr.current.mh = -1;
+        setHovPB(-1);
+        state.current.onHover && state.current.onHover(-1);
+        state.current.onPick && state.current.onPick(k2);
+      }
     }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("canvas", { ref, className: "board", "aria-label": "Illustrative interactive 3D electronic system" }),
       leaderOn && /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("svg", { className: "board-leader", "aria-hidden": "true", children: [
@@ -12514,11 +12628,10 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
         /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("span", { children: "CONTACT" }),
         /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("p", { children: "System visualization unavailable. Navigate through the sections below." })
       ] }),
-      !fallback && labels.map((p, i) => p.visible && p.x > -40 && p.x < (ref.current?.clientWidth || 0) + 40 && p.y > 90 && p.y < (ref.current?.clientHeight || 0) - 90 && safepin(p, state.current.active, state.current.mobile, ref.current?.clientWidth || 0, ref.current?.clientHeight || 0) && (state.current.active === 0 && SECTION_NODES.includes(p.name) || state.current.active >= 1 && state.current.active <= 7 && p.name === stages[state.current.active].node || state.current.active === 3 && p.name.startsWith("PB")) && /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("button", { title: p.detail, "aria-label": `${p.name}: ${p.detail}`, onClick: () => {
+      !fallback && labels.map((p, i) => p.visible && p.x > -40 && p.x < (ref.current?.clientWidth || 0) + 40 && p.y > 90 && p.y < (ref.current?.clientHeight || 0) - 90 && safepin(p, state.current.active, state.current.mobile, ref.current?.clientWidth || 0, ref.current?.clientHeight || 0) && ((state.current.active === 0 || state.current.active === 6) && SECTION_NODES.includes(p.name) || state.current.active >= 1 && state.current.active <= 7 && p.name === stages[state.current.active].node || (state.current.active === 3 && state.current.mobile && p.name.startsWith("PB") || (state.current.active === 0 || state.current.active === 6) && !state.current.mobile && p.name === "PB" + hovPB)) && /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("button", { title: p.detail, "aria-label": `${p.name}: ${p.detail}`, onClick: () => {
         if (p.name.startsWith("PB")) {
-          let pj = projects[+p.name.slice(2)];
-          if (!state.current.mobile && pj.url) window.open(pj.url, "_blank", "noopener,noreferrer");
-          else if (state.current.onTap) state.current.onTap(+p.name.slice(2));
+          ptr.current.pinH = -1;
+          state.current.onPick && state.current.onPick(+p.name.slice(2));
           return;
         }
         state.current.onJump && state.current.onJump(p.name);
@@ -12528,7 +12641,7 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
       } : void 0, onMouseLeave: p.name.startsWith("PB") ? () => {
         ptr.current.pinH = -1;
         state.current.onHover && state.current.onHover(-1);
-      } : void 0, style: p.name.startsWith("PB") ? { left: pbL(p), top: innerWidth <= 1050 ? Math.max(250, Math.min(p.y, (document.querySelector(".story")?.getBoundingClientRect().top ?? 9999) - 30)) : p.y, transform: state.current.mobile ? void 0 : "translateX(-50%)", borderColor: `rgb(${projects[+p.name.slice(2)].accent.map((v2) => Math.round(v2 * 255)).join(",")})` } : { left: p.x, top: p.y }, children: [
+      } : void 0, style: p.name.startsWith("PB") ? { left: mobile && pbSpace[p.name]?.x != null ? pbSpace[p.name].x : pbL(p), top: state.current.active === 0 || state.current.active === 6 ? p.ry ?? p.y : pbSpace[p.name]?.y ?? p.y, transform: state.current.mobile ? void 0 : "translateX(-50%)", borderColor: `rgb(${projects[+p.name.slice(2)].accent.map((v2) => Math.round(v2 * 255)).join(",")})` } : { left: p.x, top: p.y }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("b", { children: p.name.startsWith("PB") && mobile ? "0" + (+p.name.slice(2) + 1) : p.label || DISPLAY[p.name] || p.name }),
         /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("i", { children: p.name.startsWith("PB") ? "0" + (+p.name.slice(2) + 1) : pinNum(p.name) })
       ] }, p.name))
@@ -12562,6 +12675,14 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
     let [progress, setProgress] = (0, import_react23.useState)(0), [mobile, setMobile] = (0, import_react23.useState)(false), [lowMotion, setLowMotion] = (0, import_react23.useState)(false), [ready, setReady] = (0, import_react23.useState)(false), [pHover, setPHover] = (0, import_react23.useState)(-1), [chipHover, setChipHover] = (0, import_react23.useState)(-1), [tapSel, setTapSel] = (0, import_react23.useState)(-1), [lastShown, setLastShown] = (0, import_react23.useState)(-1);
     const [travelMode, setTravelMode, saved] = iu("travel-mode.v2", "normal");
     const pendingMode = (0, import_react23.useRef)(null);
+    const pendingPick = (0, import_react23.useRef)(-1);
+    const [pulse, setPulse] = (0, import_react23.useState)(-1);
+    (0, import_react23.useEffect)(() => {
+      if (pulse < 0) return;
+      let t = setTimeout(() => setPulse(-1), 2400);
+      return () => clearTimeout(t);
+    }, [pulse]);
+    const [visitors, setVisitors] = (0, import_react23.useState)("");
     (0, import_react23.useEffect)(() => {
       if (saved.ready && pendingMode.current) {
         setTravelMode(pendingMode.current);
@@ -12609,14 +12730,55 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
       if (effHover >= 0) setLastShown(effHover);
     }, [effHover]);
     (0, import_react23.useEffect)(() => {
+      let p = pendingPick.current;
+      pendingPick.current = -1;
       setPHover(-1);
       setChipHover(-1);
-      setTapSel(-1);
-      setLastShown(-1);
+      setTapSel(p);
+      setLastShown(p);
     }, [active]);
+    (0, import_react23.useEffect)(() => {
+      let dead = false;
+      window.goatcounter = window.goatcounter || {};
+      window.goatcounter.path = (p) => (p || "").replace(/[?#].*$/, "") || "/";
+      let sc = document.createElement("script");
+      sc.defer = true;
+      sc.setAttribute("data-goatcounter", "https://farhanislam.goatcounter.com/count");
+      sc.src = "https://gc.zgo.at/count.js";
+      sc.onerror = () => setVisitors((v2) => v2 === "err" ? "err" : "err");
+      document.head.appendChild(sc);
+      let t = setTimeout(() => {
+        fetch("https://farhanislam.goatcounter.com/counter//.json?start=2020-01-01").then((r) => r.ok ? r.json() : { count: 0, count_unique: 0 }).then((j2) => {
+          if (!dead && j2) {
+            let n = j2.count_unique !== void 0 ? j2.count_unique : j2.count;
+            if (n !== void 0 && n !== null) setVisitors(String(n));
+          }
+        }).catch(() => {
+          if (!dead) setVisitors("err");
+        });
+      }, 900);
+      return () => {
+        dead = true;
+        clearTimeout(t);
+      };
+    }, []);
     (0, import_react23.useEffect)(() => {
       if (location.hash === "#menu") document.querySelector(".system-nav")?.classList.add("open");
     }, []);
+    const pickProject = (k2) => {
+      if (k2 < 0) return;
+      // p07: at the 0% and 100% endpoints a project block opens its case study
+      // directly; the focus panel stays for the Projects stage.
+      if (active === 0 || active === 6) {
+        window.open(projects[k2].url, "_blank", "noopener,noreferrer");
+        return;
+      }
+      pendingPick.current = k2;
+      setTapSel(k2);
+      setLastShown(k2);
+      setPulse(k2);
+      if (active !== 3) jump(3);
+    };
     const jump = (n) => {
       let el2 = document.querySelector(".experience");
       let max = el2 ? el2.scrollHeight - el2.clientHeight : 0;
@@ -12627,7 +12789,7 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
         /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(Board, { progress, active, mobile, lowMotion, onJump: (name) => {
           let si = stages.findIndex((s) => s.node === name);
           if (si > 0) jump(si);
-        }, wire: travelMode === "wire", hoverExt: active === 3 ? chipHover >= 0 ? chipHover : tapSel : -1, onHover: setPHover, onTap: (k2) => setTapSel((t) => k2 < 0 || t === k2 ? -1 : k2) }),
+        }, wire: travelMode === "wire", hoverExt: active === 3 ? chipHover >= 0 ? chipHover : pulse : -1, onHover: setPHover, onTap: (k2) => setTapSel((t) => k2 < 0 || t === k2 ? -1 : k2), onPick: pickProject }),
         /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", { className: "vignette" }),
         /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("header", { className: "topline", children: [
           /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("button", { className: "brand", onClick: () => jump(0), children: [
@@ -12651,6 +12813,11 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
             ] })
           ] })
         ] }),
+        visitors && visitors !== "err" && /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "vcounter", "aria-label": "Visitor count", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("i", {}),
+          "VISITORS \xB7 ",
+          visitors
+        ] }),
         /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("button", { className: "mobile-menu", onClick: () => document.querySelector(".system-nav")?.classList.toggle("open"), "aria-label": "Open section menu", children: [
           "MENU ",
           /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("span", { children: "\u2630" })
@@ -12666,7 +12833,7 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
             " / ",
             stages[active].label
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("span", { className: "desktop-scroll-cue", children: "SCROLL TO EXPLORE \u2193" })
+          progress < 0.9985 && /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("span", { className: "desktop-scroll-cue", children: "SCROLL TO EXPLORE \u2193" })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "story", children: [
           /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("p", { className: "eyebrow", children: [
@@ -12694,7 +12861,18 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
             /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("h3", { children: e2.role }),
             /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("p", { children: e2.line })
           ] }, e2.org)) }),
-          active === 3 && /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(ProjectPanel, { shown: effHover >= 0 ? effHover : lastShown, onChip: (k2, mode) => mode === "hover" ? setChipHover(k2) : setTapSel((t) => t === k2 ? -1 : k2) }),
+          active === 3 && /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(ProjectPanel, { shown: effHover >= 0 ? effHover : lastShown, onChip: (k2, mode) => {
+            if (mode === "hover") {
+              setChipHover(k2);
+              return;
+            }
+            if (tapSel === k2) {
+              setTapSel(-1);
+            } else {
+              setTapSel(k2);
+              setPulse(k2);
+            }
+          } }),
           active === 4 && /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", { className: "skills-grid", children: skillGroups.map((g) => /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "skill-group", children: [
             /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("span", { children: g.name }),
             /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("ul", { children: g.items.map((it2) => /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("li", { children: it2 }, it2)) })
