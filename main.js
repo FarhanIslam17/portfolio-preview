@@ -11959,7 +11959,7 @@ float aa=max(fw,.004);float line=smoothstep(.5-.045-aa,.5,max(g.x,g.y));col+=vec
     if (mobile) {
       // p07: at the 0%/100% endpoints the PROJECTS label sits over the
       // project blocks, which must stay fully visible and tappable there.
-      if ((active === 0 || active === 6) && p.name === "PROJECTS") return false;
+      if ((active === 0 || active === 6) && p.name === "PROJ") return false;
       let storyTop = document.querySelector(".story")?.getBoundingClientRect().top ?? h * 0.6;
       if (w > h && h < 560) return p.x > 4 && p.x < w - 4 && p.y > 80 && p.y < h - 70;
       if (p.name.startsWith("PB")) return p.x > 4 && p.x < w + 30 && p.y > 135 && p.y < h - 150;
